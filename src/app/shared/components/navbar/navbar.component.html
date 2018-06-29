@@ -1,0 +1,23 @@
+<div class="navbar-fixed">
+  <nav class="nav-center" role="navigation">
+    <div class="nav-wrapper">
+      <a href="/" class="brand-logo">
+        <img alt="logo" src="../../../assets/icons/android-chrome-512x512.png"/>
+      </a>
+      <ul>
+        <li>
+          <a (click)="viewFeed('new')" class="hand btn-link" [class.active]="feedType == 'new'">New</a>
+        </li>
+        <li>
+          <a (click)="viewFeed('best')" class="hand btn-link" [class.active]="feedType == 'best'">Best</a>
+        </li>
+        <li>
+          <a (click)="viewFeed('top')" class="hand btn-link" [class.active]="feedType == 'top'">Top</a>
+        </li>
+        <li>
+          <a (click)="viewFeed('job')" class="hand btn-link" [class.active]="feedType == 'job'">Job</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>

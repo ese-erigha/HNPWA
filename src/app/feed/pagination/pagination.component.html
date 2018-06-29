@@ -1,0 +1,9 @@
+<div *ngIf="!loading" class="pager">
+  <div>
+    <a (click)="fetchPrev(feed?.pageNumber)" [class.disabled]="feed?.pageNumber == 1" class="waves-effect waves-light btn hand">
+      <i class="material-icons left">arrow_back</i>Prev</a>
+    <span class="pages">{{feed?.pageNumber}} OF {{feed?.totalPages}}</span>
+    <a (click)="fetchNext(feed?.pageNumber)" [class.disabled]="feed?.pageNumber == feed?.totalPages" class="waves-effect waves-light btn hand">
+      <i class="material-icons right">arrow_forward</i>Next</a>
+  </div>
+</div>

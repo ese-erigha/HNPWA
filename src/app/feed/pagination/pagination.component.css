@@ -1,0 +1,54 @@
+.pager{
+    position: sticky;
+    top: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: none!important;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background: #f8f9fa;
+    min-height: 6em;
+    border-radius: 10px;
+}
+
+.btn{
+    border: .05rem solid #5755d9;
+    border-radius: 5rem;
+    color: #5755d9;
+    background-color: #fff;
+    box-shadow: none!important;
+    font-size: 1rem;
+}
+.btn[disabled], .btn:disabled, .btn.disabled {
+    cursor: default;
+    opacity: .5;
+    pointer-events: none;
+    background-color: #fff;
+}
+
+.btn.disabled{
+    cursor: default;
+    opacity: .5;
+    pointer-events: none;
+    background-color: #fff;
+}
+
+.pages{
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 0 2em;
+    color: #acb3c2;
+}
+
+@media only screen and (max-width: 892px) {
+    
+    .btn{
+        padding: 0px 12px!important;
+        font-size: 12px!important;
+    }
+}

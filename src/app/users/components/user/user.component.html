@@ -1,0 +1,11 @@
+<navigation></navigation>
+<spinner *ngIf="loading"></spinner>
+<div *ngIf="user && !loading" class="user">
+    
+    <h2>{{ user?.id }}</h2>
+    <ul>
+        <li *ngIf="user?.created">Joined {{ user.created * 1000 | date: 'short' }}</li>
+        <li *ngIf="user?.karma">Karma <span class="badge" [attr.data-badge]="user.karma || 0"></span></li>
+    </ul>
+
+</div>

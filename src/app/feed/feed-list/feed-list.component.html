@@ -1,0 +1,8 @@
+<navigation></navigation>
+<pagination></pagination>
+<spinner *ngIf="loading"></spinner>
+<div *ngIf="!loading">
+  <div *ngFor="let feed of feeds;">
+    <feed-item [feed]="feed" [feedType]="feedType"></feed-item>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<div class="row item">
+    <div class="col s3 m3 l3 score">
+      <span> {{feed?.score}}</span>
+    </div>
+    <div class="col s8 m8 l8 link">
+        <a *ngIf="feed?.url" [href]="feed.url" target="_blank" rel="noopener" class="main-link hand">{{ feed.title }}</a>
+        <a *ngIf="!feed?.url" (click)="viewFeed(feed.id)" class="main-link hand">{{ feed.title }}</a>
+
+        <p class="sub-links">
+            by <a [routerLink]="['/user', feed.by]">{{ feed.by }}</a> 
+             <span *ngIf="feed?.kids?.length"> | </span> <a *ngIf="feed?.kids?.length" class="hand" (click)="viewFeed(feed.id)"> 
+              comments <span class="badge">{{feed?.kids?.length || 0}}</span>
+            </a>
+        </p>
+    </div>
+</div>

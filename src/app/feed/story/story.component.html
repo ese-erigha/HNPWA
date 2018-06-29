@@ -1,0 +1,21 @@
+<navigation></navigation>
+<spinner *ngIf="loading"></spinner>
+<div *ngIf="item?.title && !loading" class="item">
+  <div class="header card">
+    <h3>{{ item.title }}</h3>
+    <p>
+      {{ item.score }} points by
+
+      <a [routerLink]="['/user', item.by]">{{ item.by }}</a>
+
+      | {{ item?.kids?.length }} comments
+    </p>
+
+  </div>
+  <div class="comment-wrapper">
+    <ng-container *ngFor="let comment of item.kids">
+      <comment [comment]="comment"></comment>
+    </ng-container>
+  </div>
+
+</div>

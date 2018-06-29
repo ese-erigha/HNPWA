@@ -1,0 +1,8 @@
+.progress{
+    background-color: #5755d9;
+    height: 2px;
+}
+
+.progress .indeterminate{
+    background-color: #fff;
+}
