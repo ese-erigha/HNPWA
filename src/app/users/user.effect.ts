@@ -12,7 +12,7 @@ export class UserEffects {
   constructor(private actions$: Actions,private userService: UserService) {}
 
  @Effect()
-  loadItem$: Observable<Action> = this.actions$.ofType(userActions.LOAD_USER)
+  loadUser$: Observable<Action> = this.actions$.ofType(userActions.LOAD_USER)
                                                .pipe(
                                                     tap((action) => new userActions.LoadUserPendingAction({user:{}})),
                                                     switchMap((action)=>{
